@@ -6,7 +6,7 @@ export default function App() {
   const [task, setTask] = useState("")
   const [todos, setTodos] = useState([])
 
-  const url = "http://localhost:8081"
+  const url = import.meta.env.VITE_API_URL
 
   const fetchTodos = async () => {
     const res = await axios.get(`${url}/todos`)
